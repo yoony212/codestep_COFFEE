@@ -19,8 +19,21 @@ a {
   text-decoration: none;
 }
 
-
 /* ------end------ */
+
+.nav-decoration {
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-weight: bold;
+  transition: all 1s ease;
+  filter:drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
+}
+
+.nav-decoration:hover{
+  color: #E03131;
+}
 
 .mainvisual {
   position: relative;
@@ -54,16 +67,52 @@ a {
   right: 0;
 }
 
-.mainlogo img {
+.logo {
+  filter: drop-shadow(0 0 20px rgba(255,255,255,0.8) );
+}
 
+.menu-visual-wrapper {
+  margin-bottom: 20px;
+  height: 300px;
+  width: 100vw;
+  background-image: url(/img/menu.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.about-visual-wrapper {
+  margin-bottom: 20px;
+  height: 300px;
+  width: 100vw;
+  background-image: url(/img/about.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.location-visual-wrapper {
+  margin-bottom: 20px;
+  height: 300px;
+  width: 100vw;
+  background-image: url(/img/location.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.h1-title {
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
 }
 
 .h1-logo {
-  margin: auto;
+  color: #fff;
+  font-size: 72px;
 }
 
 .menu-wrapper {
-  max-width: 1280px;
+  max-width: 1000px;
   width: 100%;
   margin: auto;
   padding: 100px 0 185px;
@@ -72,18 +121,18 @@ a {
 }
 
 .menu-left {
-  max-width:49.5%;
+  max-width:50%;
   width: 100%;
+  border-right: 1px solid #000;
 }
 
 .menu-right {
-  max-width:49.5%;
+  max-width:50%;
   width: 100%;
 }
 
 .menu {
   max-width: 85%;
-  width: 100%;
   margin: auto;
   text-align: center;
 }
@@ -135,17 +184,17 @@ a {
 .menu-list {
   margin-top: 70px;
   display: block;
-  text-align: center;
+  justify-content: center;
 }
 
 .menu-ex {
+  display: block;
   display: flex;
   margin-top: 26.5px
 }
 
 .menu-name-wrap {
-  max-width: 340px;
-  width: 100%;
+  width: 87%;
   border-bottom: dotted;
   border-color: #000;
   border-width: 1px;
@@ -166,7 +215,7 @@ a {
 }
 
 .column-wrapper {
-  max-width: 1280px;
+  max-width: 969px;
   width: 100%;
   margin: auto;
   text-align: center;
@@ -192,11 +241,73 @@ a {
 .btn-read {
   margin: auto;
   width: 160px;
-  border: 1px solid #000;
+  height: 50px;
+  line-height: 3.5;
+  display: inline-block;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
 }
 
-.btn-read-text {
-  display: inline-block;
-  padding: 15px 43px;
-  color: #000;
+.btn-read span {
+  position: relative;
+  display: block;
+}
+
+.btn-read::before {
+  position: absolute;
+  content: '';
+  background: #E03131;
+  width: 20%;
+  height: 2px;
+  left: 0;
+  top: 0;
+
+}
+
+.btn-read::after {
+  position: absolute;
+  content: '';
+  background: #E03131;
+  height: 50%;
+  width: 2px;
+  left: 0;
+  top: 0;
+}
+
+.btn-read span::before {
+  position: absolute;
+  content: '';
+  background: #E03131;
+  width: 20%;
+  height: 2px;
+  right: 0;
+  bottom: 0;
+
+}
+
+.btn-read span::after {
+  position: absolute;
+  content: '';
+  background: #E03131;
+  height: 50%;
+  width: 2px;
+  right: 0;
+  bottom: 0;
+}
+
+.map-wrapper {
+  margin-top: 73px;
+  max-width: 969px;
+  width: 100%;
+  text-align: center;
+}
+
+.map {
+  margin: auto;
+}
+
+.map-description {
+  text-align: start;
+  margin-top: 30px;
 }
